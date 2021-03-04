@@ -15,6 +15,9 @@ def get_secrets():
 if __name__ == '__main__':
     config_secrets = get_secrets()
 
+    if not config_secrets:
+        print('Config Secrets are missing')
+
     client_id = config_secrets['clientId']
     secret = config_secrets['secret']
 
